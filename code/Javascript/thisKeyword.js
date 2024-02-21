@@ -11,9 +11,6 @@ console.log(this)
 // depends upon where we are running that code 
 
 
-
-
-
 // this in global scope
 this
 function x(){
@@ -38,3 +35,20 @@ x();  undefined // called without any reference in strict mode
 window.x(); // returns window object  // called with refrtence even with strict mode on
 
 // this in strict node (this substituion)
+// [RUNTIME BINDING]
+
+//-------------------------
+
+//this IN OBJECTS METHOD
+// DIFFERENCE BETWEEN FUNCTION AND A METHOD 
+// FUNCTION AS A PART OF A OBJECT IS METHOD 
+
+const obj ={
+    a:10,
+    x: function(){
+        console.log(this)
+    }
+}
+
+obj.x() ;// value becomes this whole object
+// ie {a: 10 , x:f}
