@@ -12,4 +12,4 @@
 // also assume p1 takes 3 seconds , p2 -> 1 second, p3-> 2 sec
 
 // CASE 1: 
-//case
+//case case
