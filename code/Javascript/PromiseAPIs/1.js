@@ -40,4 +40,9 @@
 // 💡Promise.allSettled() -> Will wait and provide accumulative result
 // 🤯
 
-//The Promise.race()
+//The Promise.race()-> accepts a list of promises as an iterable object and 
+// returns a new promise that ful fills or rejects as soon as there is one promise
+// that fulfills or rejects with the value or a reason from that promise
+
+// the name of priomse.race() implies that all the promises race against each other with a single winner
+// resolved or rejected
