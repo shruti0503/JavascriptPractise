@@ -139,6 +139,7 @@ const P1 = new Promise((resolve, reject) => {
 // reject, failure, rejected
 //There are 6 static methods of Promise class:
 
+
 // Promise.all(promises) – waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, it becomes the error of Promise.all, and all other results are ignored.
 
 // Promise.allSettled(promises) (recently added method) – waits for all promises to settle and returns their results as an array of objects with: status: “fulfilled” or “rejected” value (if fulfilled) or reason (if rejected).
