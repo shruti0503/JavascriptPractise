@@ -108,6 +108,7 @@ Promise.allSettled([p1, p2, p3])
 
  // It will return as soon as first promise is resolved or rejected.
  // In above example O/P: "P2 Success"
+ 
 
  // 📌 Second Scenario
 
