@@ -4,13 +4,11 @@
 // it has not occupied the call stack if that would have been the case our page mat have got frozen , 
 // so js engine is not waiting .
 // so if its not waiting ... what is hapeing behind the scenes
-
 const p1=new Promise((resolve, reject)=>{
     setTimeout(()=>{
         resolve('Promise resolved value by p1!');
     },5000)
 })
-
 const p2= new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve('Promise resolved value by p2!')
