@@ -15,7 +15,6 @@ const p2= new Promise((resolve,reject)=>{
 
     },5000)
 })
-
 async function handlePromise(){
     console.log('Hi');
     debugger;
@@ -43,6 +42,8 @@ handlePromise();
 // -> then it will check whether `p2` is resolved or not 
 //-> It will find since `p2` will take 10 secs to resolve so the same above process will repeat
 // -> execution will be suspended until promise is resolved.
+
+
 
 // REAL WORLD EXAMPLE
 async function handlePromise(){
