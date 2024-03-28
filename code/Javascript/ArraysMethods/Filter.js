@@ -120,5 +120,18 @@ const userNames=Object .keys(userDetails) // array of keys
     });
 },{})
 
-console.log(userNames)
+//Inside the reduce() callback function:
+
+// object: This represents the accumulator, which starts as an empty object {}. 
+//As the reduce() function iterates over the keys, properties are added to this object.
+//key: This represents each key in the filtered array.
+
+// console.log(userNames) // { firstName: 'Jane', lastName: 'Daniels', userName: 'jane.daniels' }
+
+// Object.assign(object, { [key]: userDetails[key] }): 
+//This line is using Object.assign() to merge a new object into the accumulator object (object).
+// The new object has a single property, where the key is dynamically determined by [key], 
+//and the value is userDetails[key], which retrieves the corresponding value from the userDetails object.
+
+// The result of the reduce() operation is an object containing only the properties from userDetails whose keys contain the substring "Name".
 
