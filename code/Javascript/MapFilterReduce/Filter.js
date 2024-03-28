@@ -30,7 +30,8 @@ let users = [
     { name: 'Albert', age: 76, occupation: 'programmer' },
 ]
 
- let filteredUsers=[];
+ let filteredUsers=[]; // created an empty array
+ //return a new array whose age is greater than 40 and whose occupation is equal to programmer:
  for(let i=0;i<users.length;i++){
     if(users[i].age > 90 && users[i].occupation==='programmer'){
         filteredUsers=[...filteredUsers, users[i]];
@@ -38,3 +39,19 @@ let users = [
  }
 
  console.log(filteredUsers)
+
+ // NOW USING  FILTER METHOD => myArray.filter(callbackFn)
+ //you have access to each element, the index, and the original array itself:
+ Array.filter((element, index, array)=> {"....."})
+
+
+ let FilteredUsers=users.filter(user=>user.age>40 && user.occupation==="programmer");
+
+
+ // Usecase
+ // sort the filtered array in and return array of names
+ let fFlteredUsers=users.filter(user=> user.age > 40 && name =="prahsnt").sort((a,b)=> a.age-b.age).map(user=>user.name);
+
+
+
+
