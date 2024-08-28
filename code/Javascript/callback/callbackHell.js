@@ -57,19 +57,44 @@ fetchPosts(user, (posts) => {
 // Modularization: Break down code into smaller, reusable functions to flatten the nesting.
 
   
-function fetchUser(userId){
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            console.log('Fetched users:', userId);
-            resolve({userId:userId, name:'John Doe'})
-        },1000)
-    })
-}
-
-function fetchPosts(user){
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            console.log('Fetched psosts for user', user.name)
-        })
-    })
-}
+// Simulating asynchronous API calls with Promises
+function fetchUser(userId) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log('Fetched user:', userId);
+        resolve({ userId: userId, name: 'John Doe' });
+      }, 1000);
+    });
+  }
+  
+  function fetchPosts(user) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log('Fetched posts for user:', user.name);
+        resolve([
+          { postId: 1, title: 'Post 1' },
+          { postId: 2, title: 'Post 2' }
+        ]);
+      }, 1000);
+    });
+  }
+  
+  function fetchComments(post) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log('Fetched comments for post:', post.title);
+        resolve([
+          { commentId: 1, content: 'Great post!' },
+          { commentId: 2, content: 'Very informative!' }
+        ]);
+      }, 1000);
+    });
+  }
+  
+  // Using Promises to avoid callback hell
+  fetchUser(1)
+    .then((user) => fetchPosts(user))
+    .then((posts) => fetchComments(posts[0]))
+    .then((comments) => console.log('Comments:', comments))
+    .catch((error) => console.error('Error:', error));
+  
