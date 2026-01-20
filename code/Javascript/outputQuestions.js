@@ -24,3 +24,8 @@ console.log(isNaN(null));
 console.log('\n');
 console.log(typeof undefined)
 console.log(typeof null)
+
+Promise.resolve().then(() => console.log('1'));
+setTimeout(() => console.log('2'), 0);
+queueMicrotask(() => console.log('3'));
+console.log('4');
